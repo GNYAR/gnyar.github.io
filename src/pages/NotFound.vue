@@ -5,9 +5,14 @@
     </v-col>
 
     <v-col cols="auto menu">
-      <router-link :to="{ name: 'home' }">
-        <v-btn block color="primary" prepend-icon="mdi-home">Home</v-btn>
-      </router-link>
+      <v-btn
+        block
+        color="primary"
+        prepend-icon="mdi-home"
+        :to="{ name: 'home' }"
+      >
+        Home
+      </v-btn>
     </v-col>
   </v-row>
 </template>
