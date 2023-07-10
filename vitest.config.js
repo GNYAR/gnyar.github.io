@@ -8,6 +8,9 @@ export default mergeConfig(
     test: {
       globals: true,
       environment: "jsdom",
+      coverage: {
+        reporter: ["lcov", "html"],
+      },
     },
   })
 );
