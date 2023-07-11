@@ -11,6 +11,7 @@ export default mergeConfig(
       coverage: {
         reporter: ["lcov", "html"],
       },
+      setupFiles: ["./vitest.setup.js"],
     },
   })
 );
