@@ -1,3 +1,11 @@
 <template>
-  <h1>Home</h1>
+  <GSheet></GSheet>
 </template>
+
+<script>
+import GSheet from "@/components/GSheet.vue";
+
+export default {
+  components: { GSheet },
+};
+</script>
