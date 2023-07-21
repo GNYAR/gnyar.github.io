@@ -40,6 +40,15 @@
       </v-list>
     </div>
   </div>
+
+  <ins
+    class="adsbygoogle"
+    style="display: block"
+    data-ad-client="ca-pub-5257181231136891"
+    data-ad-slot="6235112269"
+    data-ad-format="auto"
+    data-full-width-responsive="true"
+  ></ins>
 </template>
 
 <script>
@@ -48,24 +57,40 @@ import GSheet from "@/components/GSheet.vue";
 export default {
   components: { GSheet },
 
+  mounted() {
+    const adsScript = document.createElement("script");
+    adsScript.async = true;
+    adsScript.src =
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5257181231136891";
+    adsScript.crossOrigin = "anonymous";
+
+    // (adsbygoogle = window.adsbygoogle || []).push({});
+    const adsPush = document.createElement("script");
+    adsPush.text = "(adsbygoogle = window.adsbygoogle || []).push({});";
+
+    document.head.appendChild(adsScript);
+    document.body.appendChild(adsPush);
+  },
+
   data() {
     return {
       isIntersecting: false,
       items: [
+        // {
+        //   icon: "mdi-information",
+        //   title: "關於我",
+        // },
+        // {
+        //   icon: "mdi-star-box-multiple",
+        //   title: "小工具/作品",
+        // },
+        // {
+        //   icon: "mdi-music",
+        //   title: "音樂推薦",
+        // },
         {
-          icon: "mdi-flag",
-          title: "Title 1",
-          subtitle: "subtitle...",
-        },
-        {
-          icon: "mdi-flag",
-          title: "Title 2",
-          subtitle: "subtitle...",
-        },
-        {
-          icon: "mdi-flag",
-          title: "Title 3",
-          subtitle: "subtitle...",
+          icon: "mdi-advertisements",
+          title: "廣告專區",
         },
       ],
       tab: null,
@@ -90,6 +115,6 @@ export default {
 
 .menu {
   margin-top: 20vh;
-  width: 400px;
+  width: 300px;
 }
 </style>
