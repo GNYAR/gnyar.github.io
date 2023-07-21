@@ -62,8 +62,6 @@ export default {
     adsScript.async = true;
     adsScript.src =
       "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5257181231136891";
-    adsScript.integrity =
-      "sha384-rFFjk+7vWZy3hOBEmW9dfU7MDAoH76HI/wT4pCmdoZU8qbfcsfj8i79JpGKphq97";
     adsScript.crossOrigin = "anonymous";
 
     // (adsbygoogle = window.adsbygoogle || []).push({});
