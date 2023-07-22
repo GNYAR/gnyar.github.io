@@ -1,11 +1,3 @@
 <template>
-  <v-container fluid>
-    <RouterView></RouterView>
-  </v-container>
+  <RouterView></RouterView>
 </template>
-
-<style lang="scss" scoped>
-.v-container {
-  height: 100vh;
-}
-</style>

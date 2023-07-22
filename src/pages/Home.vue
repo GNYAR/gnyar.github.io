@@ -20,7 +20,7 @@
     </v-banner>
   </v-slide-y-transition>
 
-  <div class="d-flex vh-100">
+  <div class="d-flex vh-100 pa-4">
     <v-spacer style="max-width: 60vw"></v-spacer>
 
     <div class="menu">
@@ -41,21 +41,35 @@
     </div>
   </div>
 
-  <ins
-    class="adsbygoogle"
-    style="display: block"
-    data-ad-client="ca-pub-5257181231136891"
-    data-ad-slot="6235112269"
-    data-ad-format="auto"
-    data-full-width-responsive="true"
-  ></ins>
+  <v-card class="pb-6" color="secondary">
+    <v-card-title class="d-flex align-center py-3">
+      <v-icon class="mr-3" size="small" :icon="items[0].icon"></v-icon>
+      <div>{{ items[0].title }}</div>
+    </v-card-title>
+
+    <v-card-text>
+      <Music></Music>
+    </v-card-text>
+  </v-card>
+
+  <div class="vh-100">
+    <ins
+      class="adsbygoogle"
+      style="display: block"
+      data-ad-client="ca-pub-5257181231136891"
+      data-ad-slot="6235112269"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    ></ins>
+  </div>
 </template>
 
 <script>
 import GSheet from "@/components/GSheet.vue";
+import Music from "@/components/Music.vue";
 
 export default {
-  components: { GSheet },
+  components: { GSheet, Music },
 
   mounted() {
     const adsScript = document.createElement("script");
@@ -84,10 +98,10 @@ export default {
         //   icon: "mdi-star-box-multiple",
         //   title: "小工具/作品",
         // },
-        // {
-        //   icon: "mdi-music",
-        //   title: "音樂推薦",
-        // },
+        {
+          icon: "mdi-music",
+          title: "音樂推薦",
+        },
         {
           icon: "mdi-advertisements",
           title: "廣告專區",
@@ -107,9 +121,6 @@ export default {
 
 <style lang="scss" scoped>
 .v-banner {
-  margin-top: -16px;
-  margin-left: -16px;
-  width: calc(100% + 32px);
   z-index: 1;
 }
 
